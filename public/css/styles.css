@@ -5,9 +5,9 @@ body {
 }
 
 nav {
-  background-color: #333;
+  background-color: #1b07ce;
   color: white;
-  padding: 10px 0;
+  padding: 20px 0;
   text-align: center;
 }
 nav ul {
@@ -68,7 +68,7 @@ table tr:hover {
 .action-buttons button {
   padding: 5px 10px;
   margin-right: 5px;
-  background-color: #333;
+  background-color: #333333;
   color: white;
   border: none;
   border-radius: 5px;
