@@ -28,7 +28,7 @@ nav ul li a {
   transition: background-color 0.3s;
 }
 nav ul li a:hover {
-  background-color: #555;
+  background-color: #110675;
 }
 
 .container {
@@ -75,7 +75,7 @@ table tr:hover {
   cursor: pointer;
 }
 .action-buttons button:hover {
-  background-color: #555;
+  background-color: #555555;
 }
 .action-buttons span {
   margin: 0 5px;
