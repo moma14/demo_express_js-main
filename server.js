@@ -19,6 +19,12 @@ app.use((req, res, next) => {
   next();
 });
 
+//middleware para que se accedan a las vistas
+app.use((req, res, next) =>{
+    res.locals.clientes=req.session.clientes||null;
+    next();
+});
+
 // Configuración de la plantilla Pug
 app.set('view engine', 'pug');
 app.set('views', path.join(__dirname, 'views'));
@@ -31,6 +37,9 @@ app.use(express.json());
 app.get('/', (req, res) => {
     res.render('index', { title: 'Página de Bienvenida' });
 }); 
+app.get('/',(req, res) => {
+    const clientes=req.session.clientes;
+});
 
 // Ruta para el catálogo de productos
 app.get('/catalogo', (req, res) => {
@@ -66,6 +75,9 @@ app.get('/carrito', (req, res) => {
 app.post('/agregar-al-carrito/:id', (req, res) => {
   const idProducto = req.params.id;
   const producto = productosController.getProductoPorId(idProducto);
+  if(!req.session.clientes){
+    return res.redirect('/registro');
+  }
   if (producto && producto.cantidad > 0) {
       let carrito = req.session.carrito || [];
       let productoEnCarrito = carrito.find(item => item.id === idProducto);
@@ -132,22 +144,29 @@ app.post('/procesar-compra', (req, res) => {
     const carrito = req.session.carrito || []; // Obtiene el carrito de la sesión del usuario
 
     // Lógica para procesar la compra...
+    if(!req.session.clientes){
+        return res.status(403).send('Es necesario registrarse');
+    }
 
     // Vaciar el carrito después de procesar la compra
     req.session.carrito = [];
     
     res.render('confirmacion-compra', { title: 'Compra Exitosa' });
 });
+
 app.get('/registro', (req, res) => {
     res.render('registro', {title:'Registro'});
 });
+
+//logica para la parte del registro del cliente
 app.post('/registro', (req, res) => {
     const { nombre, email, mensaje } = req.body;
-    // Aquí podrías procesar los datos del formulario
     console.log(nombre, email, mensaje);
-    res.redirect('/registro');
+    req.session.clientes={nombre, email};
+    res.redirect('/');
     console.log('Cliente registrado',nombre, email);
   });
+
 // Puerto en el que escucha el servidor
 const port = 3000;
 app.listen(port, () => {

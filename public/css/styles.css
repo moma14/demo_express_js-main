@@ -95,6 +95,7 @@ table tr:hover {
   border: none;
   cursor: pointer;
 }
+
 .procesar-compra-button:hover {
   background-color: #45a049;
 }
@@ -173,9 +174,7 @@ p.empty-cart {
   margin-top: 20px;
 }
 
-.button-confirm,
-.button-cancel,
-.button-return {
+.button-confirm, .button-cancel, .button-return {
   padding: 10px 20px;
   margin: 10px;
   font-size: 16px;
@@ -199,9 +198,7 @@ p.empty-cart {
   color: white;
 }
 
-.button-confirm:hover,
-.button-cancel:hover,
-.button-return:hover {
+.button-confirm:hover, .button-cancel:hover, .button-return:hover {
   opacity: 0.8;
 }
 
