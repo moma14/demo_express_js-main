@@ -141,6 +141,13 @@ app.post('/procesar-compra', (req, res) => {
 app.get('/registro', (req, res) => {
     res.render('registro', {title:'Registro'});
 });
+app.post('/registro', (req, res) => {
+    const { nombre, email, mensaje } = req.body;
+    // Aquí podrías procesar los datos del formulario
+    console.log(nombre, email, mensaje);
+    res.redirect('/registro');
+    console.log('Cliente registrado',nombre, email);
+  });
 // Puerto en el que escucha el servidor
 const port = 3000;
 app.listen(port, () => {

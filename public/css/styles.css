@@ -68,14 +68,14 @@ table tr:hover {
 .action-buttons button {
   padding: 5px 10px;
   margin-right: 5px;
-  background-color: #333333;
+  background-color: #0b6970;
   color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
 }
 .action-buttons button:hover {
-  background-color: #555555;
+  background-color: #1ac4ca;
 }
 .action-buttons span {
   margin: 0 5px;
@@ -134,7 +134,7 @@ p.empty-cart {
 
 .producto-container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 20px;
 }
 
@@ -157,7 +157,7 @@ p.empty-cart {
 }
 .producto button {
   padding: 8px 15px;
-  background-color: #333;
+  background-color: #0be253;
   color: white;
   border: none;
   border-radius: 5px;
