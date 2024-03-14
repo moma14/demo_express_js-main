@@ -35,7 +35,7 @@ app.use(express.json());
 
 // Ruta para la página de inicio
 app.get('/', (req, res) => {
-    res.render('index', { title: 'Bienvenidos a developer´s cave' });
+    res.render('index', { title: '"Bienvenidos a developer´s cave"' });
 }); 
 app.get('/',(req, res) => {
     const clientes=req.session.clientes;
