@@ -3,6 +3,9 @@ const app = express();
 const session = require('express-session');
 const path = require('path');
 const productosController = require('./controllers/productos');
+const bodyParser = require('body-parser');
+
+app.use(bodyParser.urlencoded({ extended: true }));
 
 // Configurar middleware para manejar sesiones
 app.use(session({
@@ -96,7 +99,7 @@ app.post('/actualizar-cantidad/:id/:cantidad', (req, res) => {
         const cantidadNueva = item.cantidad + cantidad;
         if (cantidadNueva > 0 && cantidad <= producto.cantidad) {
             item.cantidad = cantidadNueva;
-            item.precio = item.cantidad * producto.precio;
+            //item.precio = item.cantidad * producto.precio;
             producto.cantidad -= cantidad;
             if (item.cantidad === 0) {
                 carrito = carrito.filter(item => item.id !== idProducto);
@@ -135,7 +138,9 @@ app.post('/procesar-compra', (req, res) => {
     
     res.render('confirmacion-compra', { title: 'Compra Exitosa' });
 });
-  
+app.get('/registro', (req, res) => {
+    res.render('registro', {title:'Registro'});
+});
 // Puerto en el que escucha el servidor
 const port = 3000;
 app.listen(port, () => {
