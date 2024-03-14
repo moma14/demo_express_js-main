@@ -163,7 +163,7 @@ app.post('/registro', (req, res) => {
     const { nombre, email, mensaje } = req.body;
     console.log(nombre, email, mensaje);
     req.session.clientes={nombre, email};
-    res.redirect('/');
+    res.redirect('/catalogo');
     console.log('Cliente registrado',nombre, email);
   });
 

@@ -3,10 +3,9 @@ body {
   color: #fff;
   margin: 0;
   padding: 0;
-  background-image: url('../images/fondo.jpg');
+  background-image: url("../images/fondo.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  
 }
 
 nav {
@@ -128,7 +127,7 @@ p.empty-cart {
 .search-bar button {
   padding: 8px 15px;
   margin-left: 10px;
-  background-color: #08b673;
+  background-color: #09db79;
   color: white;
   border: none;
   border-radius: 5px;
@@ -136,7 +135,7 @@ p.empty-cart {
   transition: background-color 0.3s;
 }
 .search-bar button:hover {
-  background-color: #20cf95;
+  background-color: #049156;
 }
 
 .producto-container {
