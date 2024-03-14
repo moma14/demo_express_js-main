@@ -1,9 +1,11 @@
 extends layout
 
 block content
-  h1 #{title}
+  h1 #{title} 
   p Bienvenido a nuestra humilde pagina para informaticos
 
   form(action='/buscar-producto', method='GET' class='search-bar')
     input(type='text', name='q', placeholder='Buscar producto...')
     button(type='submit') Buscar
+
+  .background-image  

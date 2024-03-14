@@ -1,7 +1,12 @@
 body {
   font-family: Arial, sans-serif;
+  color: #fff;
   margin: 0;
   padding: 0;
+  background-image: url('../images/fondo.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  
 }
 
 nav {
@@ -68,14 +73,14 @@ table tr:hover {
 .action-buttons button {
   padding: 5px 10px;
   margin-right: 5px;
-  background-color: #0b6970;
+  background-color: #b60707;
   color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
 }
 .action-buttons button:hover {
-  background-color: #1ac4ca;
+  background-color: #ca521a;
 }
 .action-buttons span {
   margin: 0 5px;
@@ -90,9 +95,10 @@ table tr:hover {
 .procesar-compra-button {
   padding: 10px 20px;
   font-size: 16px;
-  background-color: #4CAF50;
+  background-color: #0dce13;
   color: white;
   border: none;
+  border-radius: 5px;
   cursor: pointer;
 }
 
@@ -122,7 +128,7 @@ p.empty-cart {
 .search-bar button {
   padding: 8px 15px;
   margin-left: 10px;
-  background-color: #333;
+  background-color: #08b673;
   color: white;
   border: none;
   border-radius: 5px;
@@ -130,7 +136,7 @@ p.empty-cart {
   transition: background-color 0.3s;
 }
 .search-bar button:hover {
-  background-color: #555;
+  background-color: #20cf95;
 }
 
 .producto-container {

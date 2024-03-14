@@ -6,7 +6,9 @@ const productos = [
     { id: 4, nombre: 'Setup basico', descripcion: 'Descripción del Producto 4', cantidad: 10, precio: 4100, imagen: 'producto4.jpg' },
     { id: 5, nombre: 'Control', descripcion: 'Descripción del Producto 5', cantidad: 15, precio: 550, imagen: 'producto5.jpg' },
     { id: 6, nombre: 'Silla Gamer', descripcion: 'Descripción del Producto 6', cantidad: 5, precio: 650, imagen: 'producto6.jpg' },
-    { id: 7, nombre: 'Setup Pro', descripcion: 'Descripción del Producto 7', cantidad: 5, precio: 13050, imagen: 'producto7.jpg' }
+    { id: 7, nombre: 'Setup Pro', descripcion: 'Descripción del Producto 7', cantidad: 5, precio: 13050, imagen: 'producto7.jpg' },
+    { id: 7, nombre: 'Kit visor RV', descripcion: 'Descripción del Producto 7', cantidad: 5, precio: 5050, imagen: 'producto8.jpg' },
+    { id: 7, nombre: 'Kit perifericos gaming', descripcion: 'Descripción del Producto 7', cantidad: 5, precio: 3050, imagen: 'producto9.jpg' }
   ];
   
   function getProductos() {
